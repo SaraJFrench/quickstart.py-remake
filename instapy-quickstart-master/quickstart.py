@@ -9,9 +9,9 @@ from instapy import InstaPy
 from instapy import smart_run
 
 # login credentials
-insta_username = '_sara_jessica',
-insta_password = 'ihatethebikelane1'
-# insta_password = 'f6oUk24k4Mbm'
+insta_username = '',
+insta_password = ''
+
 
 dont_likes = ['sex', 'nude', 'naked', 'beef', 'pork', 'seafood',
               'egg', 'chicken', 'cheese', 'sausage', 'lobster',
@@ -33,8 +33,8 @@ like_tag_list = ['learnpython', 'learncode', 'coding', 'codingbootcamp',
 accounts = ['accounts with similar content']
 
 # get a session!
-session = InstaPy(username='_sara_jessica',
-                  password='ihatethebikelane1',
+session = InstaPy(username='',
+                  password='',
                   headless_browser=False)
 
 with smart_run(session):
@@ -58,18 +58,7 @@ with smart_run(session):
                            InstapyFollowed=(True, "all"), style="FIFO",
                            unfollow_after=90 * 60 * 60, sleep_delay=501)
 
-#     """ Joining Engagement Pods...
-#     """
-#     photo_comments = ['Nice shot! @{}',
-#         'I love your profile! @{}',
-#         'Wonderful :thumbsup:',
-#         'Just incredible :open_mouth:',
-#         'What camera did you use @{}?',
-#         'Love your posts @{}',
-#         'Looks awesome @{}',
-#         'Getting inspired by you @{}',
-#         ':raised_hands: Yes!',
-#         'I can feel your passion @{} :muscle:']
+
 
     session.set_do_comment(enabled = True, percentage = 95)
     session.set_comments(photo_comments, media = 'Photo')
